@@ -1,0 +1,55 @@
+# Node modules y builds globales
+/node_modules
+/dist
+/build
+
+# Salidas de apps
+apps/*/node_modules
+apps/*/dist
+apps/*/build
+apps/*/coverage
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+/admin-theme
+
+# OS
+.DS_Store
+
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs y editores
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# dotenv environment variable files
+.env
+.env.*
+*.local
+
+# Otros
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

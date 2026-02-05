@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "strict": true,
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "target": "ESNext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+      "paths": {
+        "@root/*": ["src/*"],
+        "@core/*": ["src/core/*"],
+        "@pages/*": ["src/pages/*"],
+        "@hooks/*": ["src/hooks/*"],
+        "@icons/*": ["src/icons/*"],
+        "@shared/*": ["src/shared/*"],
+        "@context/*": ["src/context/*"],
+        "@modules/*": ["src/modules/*"],
+        "@components/*": ["src/components/*"],
+        "@models/*": ["../../shared/models/*"],
+      }
+    },
+}

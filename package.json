@@ -1,0 +1,46 @@
+{
+  "name": "bootstrap-mvp-monorepo",
+  "version": "1.0.0",
+  "description": "Monorepo for Bootstrap MVP - Backend (NestJS) + Frontend (React + Vite)",
+  "private": true,
+  "author": "Victor Pinedo, Jose Soto",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "build": "pnpm run --recursive build",
+    "build:backend": "pnpm --filter backend build",
+    "build:frontend": "pnpm --filter frontend build",
+    "start:backend": "pnpm --filter backend start",
+    "start:backend:prod": "pnpm --filter backend start:prod",
+    "lint": "pnpm run --recursive lint",
+    "lint:backend": "pnpm --filter backend lint",
+    "lint:frontend": "pnpm --filter frontend lint",
+    "test": "pnpm --filter backend test",
+    "test:e2e": "pnpm --filter backend test:e2e",
+    "test:cov": "pnpm --filter backend test:cov",
+    "seed": "pnpm --filter backend seed",
+    "clean": "pnpm run --recursive clean && rm -rf node_modules",
+    "format": "pnpm run --recursive format"
+  },
+  "engines": {
+    "node": ">=20.19.0",
+    "pnpm": ">=8.0.0"
+  },
+  "keywords": [
+    "monorepo",
+    "nestjs",
+    "react",
+    "vite",
+    "rbac",
+    "authentication",
+    "authorization"
+  ],
+  "dependencies": {
+    "@prisma/client": "5.13.0"
+  },
+  "devDependencies": {
+    "prisma": "5.13.0"
+  }
+}

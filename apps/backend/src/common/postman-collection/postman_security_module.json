@@ -1,0 +1,156 @@
+{
+  "info": {
+    "_postman_id": "rbac-api-collection-2025",
+    "name": "RBAC API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"12345678\",\n  \"username\": \"testuser\"\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/auth/register",
+          "host": ["{{baseURL}}"],
+          "path": ["auth", "register"]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"12345678\"\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/auth/login",
+          "host": ["{{baseURL}}"],
+          "path": ["auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{baseURL}}/auth/logout",
+          "host": ["{{baseURL}}"],
+          "path": ["auth", "logout"]
+        }
+      }
+    },
+    {
+      "name": "Test Public Endpoint",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseURL}}/test/public",
+          "host": ["{{baseURL}}"],
+          "path": ["test", "public"]
+        }
+      }
+    },
+    {
+      "name": "Test Private Endpoint",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" }
+        ],
+        "url": {
+          "raw": "{{baseURL}}/test/private",
+          "host": ["{{baseURL}}"],
+          "path": ["test", "private"]
+        }
+      }
+    },
+    {
+      "name": "Test Admin Endpoint",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" }
+        ],
+        "url": {
+          "raw": "{{baseURL}}/test/admin",
+          "host": ["{{baseURL}}"],
+          "path": ["test", "admin"]
+        }
+      }
+    },
+    {
+      "name": "Test Super-Admin Endpoint",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" }
+        ],
+        "url": {
+          "raw": "{{baseURL}}/test/super",
+          "host": ["{{baseURL}}"],
+          "path": ["test", "super"]
+        }
+      }
+    }
+  ]
+    ,
+    {
+      "name": "Listar roles de un usuario",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" }
+        ],
+        "url": {
+          "raw": "{{baseURL}}/security/users/1/roles",
+          "host": ["{{baseURL}}"],
+          "path": ["security", "users", "1", "roles"]
+        }
+      }
+    },
+    {
+      "name": "Asignar rol a usuario",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" }
+        ],
+        "url": {
+          "raw": "{{baseURL}}/security/users/1/roles/2",
+          "host": ["{{baseURL}}"],
+          "path": ["security", "users", "1", "roles", "2"]
+        }
+      }
+    },
+    {
+      "name": "Quitar rol a usuario",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" }
+        ],
+        "url": {
+          "raw": "{{baseURL}}/security/users/1/roles/2",
+          "host": ["{{baseURL}}"],
+          "path": ["security", "users", "1", "roles", "2"]
+        }
+      }
+    }
+  ]
+}
